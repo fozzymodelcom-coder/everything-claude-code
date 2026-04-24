@@ -17,6 +17,7 @@ rules/
 ├── typescript/      # TypeScript/JavaScript specific
 ├── python/          # Python specific
 ├── golang/          # Go specific
+├── ruby/            # Ruby / Rails specific
 ├── web/             # Web and frontend specific
 ├── swift/           # Swift specific
 └── php/             # PHP specific
@@ -34,6 +35,7 @@ rules/
 ./install.sh typescript
 ./install.sh python
 ./install.sh golang
+./install.sh ruby
 ./install.sh web
 ./install.sh swift
 ./install.sh php
@@ -58,6 +60,7 @@ cp -r rules/common ~/.claude/rules/common
 cp -r rules/typescript ~/.claude/rules/typescript
 cp -r rules/python ~/.claude/rules/python
 cp -r rules/golang ~/.claude/rules/golang
+cp -r rules/ruby ~/.claude/rules/ruby
 cp -r rules/web ~/.claude/rules/web
 cp -r rules/swift ~/.claude/rules/swift
 cp -r rules/php ~/.claude/rules/php
@@ -96,7 +99,7 @@ For non-language domains like `web/`, follow the same layered pattern when there
 When language-specific rules and common rules conflict, **language-specific rules take precedence** (specific overrides general). This follows the standard layered configuration pattern (similar to CSS specificity or `.gitignore` precedence).
 
 - `rules/common/` defines universal defaults applicable to all projects.
-- `rules/golang/`, `rules/python/`, `rules/swift/`, `rules/php/`, `rules/typescript/`, etc. override those defaults where language idioms differ.
+- `rules/golang/`, `rules/python/`, `rules/ruby/`, `rules/swift/`, `rules/php/`, `rules/typescript/`, etc. override those defaults where language idioms differ.
 
 ### Example
 
